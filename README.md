@@ -24,4 +24,5 @@ When you click the link, it kicks off a chain of events.
 		Receives and displays the data provided by the render_template return statment in
 		get_all_stations().
 		
-
+##### Or, as a Diagram (Ignore the Docker Reference below Postgres):
+![](flask_diagram.png)
