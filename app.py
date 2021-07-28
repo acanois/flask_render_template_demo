@@ -17,11 +17,22 @@ station_table = Base.classes.station
 def home_page():
     return render_template('index.html')
 
+
 @app.route('/get-all-stations', methods=['GET'])
 def get_all_stations():
+    """Step 2:
+        Query the db for all stations in the station table
+
+       Step 3:
+        DB provides the data
+    """
     stations = session.query(station_table).all()
     session.close()
     res_object = []  # Empty response object
+
+    """Step 4:
+        Process the provided data and send it to 'display_data.html' with render_template()
+    """
     for station in stations:
         print(station)
         res_object.append({
